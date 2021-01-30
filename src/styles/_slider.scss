@@ -1,16 +1,25 @@
 .slider {
   display: flex;
   align-items: flex-end;
+  overflow: hidden;
 
   @media (max-width: 1199px) {
     display: none;
   }
 
+  &__image {
+    position: absolute;
+    border-top-left-radius: 30px;
+    display: none;
+  }
+
   &__block {
+    position: absolute;
     display: flex;
     align-items: center;
     padding: 48px;
     gap: 24px;
+    z-index: 2;
   }
 
   &__switcher {
